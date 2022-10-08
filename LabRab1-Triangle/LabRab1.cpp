@@ -3,12 +3,12 @@
 #define _USE_MATH_DEFINES           //для объявления M_PI
 #include <iostream>                 //для ввода-вывода
 #include <cmath>                   //для математических операций, acos
-
+#include <stdlib.h>
 using namespace std;
 
 float a = 0, b = 0, c = 0;
 
-int main() {
+void task1() {
 
     setlocale(LC_ALL, "ru-ru");
 
@@ -19,8 +19,10 @@ int main() {
     //функция на проверку существования треугольника
     if (a + b > c && b + c > a && a + c > b)
         cout << "Такой треугольник существует!" << endl;
-    else
+    else {
         cout << "Такого треугольника нет(" << endl;
+        abort();
+    };
     //Вычисление угла альфа
     float cosinusA = ((b * b) + (c * c) - (a * a)) / (2 * b * c);
     //cout<<"Cos alpha = "<< cosinusA<<endl;
@@ -43,5 +45,21 @@ int main() {
         "            \n" << "betta = " << betta <<
         "            \n" << "gamma = " << gamma;
 
-    return 0;
 }
+int main() {
+    setlocale(LC_ALL, "Russian");
+    unsigned short choice;
+    cout << "Введите номер задания(1/0, где 0 это выход): ";
+    cin >> choice;
+    while (choice != 0) {
+        switch (choice)
+        {
+        case 1:
+            task1();
+            cout << "\nВведите номер задания(1/0, где 0 это выход): ";
+            cin >> choice;
+            break;
+        }
+    }
+        return 0;
+    }
