@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+/*Вычислить значения функции x в степени n для каждого из значений n от 1 до 10 (шагом 1).
+* Используя 
+* цикл
+* обращение к функции в случае если n меняется от i до j (шагом k).
+* Алгоритм 
+* 1)cin X
+* 2)N=0; Y=1
+* 3)N=N+1
+* 4)Если N>10, то идти к пункту 8)
+* 5)Y=Y*X
+* 6)cout N,Y
+* 7)идти к пункту 3)
+* 8)конец
+*/
+
+void cycle() {
+    int x;
+	cout << "Введите цифру и мы высчитаем её степень от 1 до 10!\n" << "Введите целое число: " << endl;
+	cin >> x;
+	system("cls");
+	for (int n = 1; n <= 10; n++) {
+		cout << pow(x, n) << endl;
+	}
+}
+void function() {
+    cout << "Этот раздел пока в доработке!!!" << endl;
+}
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    unsigned short choice;
+    cout << "Введите номер задания:\n1 - Считывание степени числа циклом\n"
+                                   "2 - Обращение к функции\n"
+                                   "0 - Выход с программы\n";
+    cin >> choice;
+    system("cls");
+    while (choice != 0) {
+        switch (choice)
+        {
+        case 1:
+            cycle();
+            system("pause");
+            system("cls");
+            cout << "Введите номер задания(1/2, где 0 это выход): ";
+            cin >> choice;
+            system("cls");
+            break;
+        case 2:
+            function();
+            system("pause");
+            system("cls");
+            cout << "Введите номер задания(1/2, где 0 это выход): ";
+            cin >> choice;
+            system("cls");
+            break;
+        case 0:
+            break;
+        default:
+            cout << "Неверное число(\n";
+            cout << "Введите номер задания(1/2, где 0 это выход): ";
+            cin >> choice;
+            break;
+        }
+    }
+    return 0;
+}
