@@ -20,8 +20,9 @@ void cycle() {
 	cout << "Введите цифру и мы высчитаем её степень от 1 до 10!\n" << "Введите целое число: " << endl;
 	cin >> x;
 	system("cls");
+    cout << "Ответ: " << endl;
 	for (int n = 1; n <= 10; n++) {
-		cout << pow(x, n) << endl;
+		cout << x <<"^"<< n << " = " << pow(x, n) << endl;
 	}
 }
 void function() {
