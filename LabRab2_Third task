@@ -1,0 +1,27 @@
+/* Решение арифметической прогрессии.
+Дано: an, d, n
+Найти: a1 */
+#include <iostream>
+using namespace std;
+
+double a, d;
+int n;
+
+int main() {
+setlocale(LC_ALL, "ru"); //Локализация русского языка
+cout << "Введите a"<<endl; //вывод текста
+cin >> a;                  //ввод a
+cout <<"Введите d"<<endl;
+cin >>d;                   //ввод d
+cout <<"Введите n"<<endl;
+cin >> n;                  //ввод n
+
+double a1;                 //объявление a1;
+
+for (int i = 1; i <=2; i++){         //цикл выполняемый 1 раз
+    a1 = a - d*(n-1);               //формула внутри цикла
+}
+cout <<"Ответ:\n" << "a1 = "<< a1;    //вывод a1
+  
+  return 0;
+}
