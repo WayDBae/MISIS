@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+float a, bettaVgradusah, gammaVgradusah;
+
+int main(){
+    cout << "Введите сторону a\n"; cin >> a;
+    cout << "Введите сторону угол бетта\n"; cin >> bettaVgradusah;
+    cout << "Введите сторону угол гамма\n"; cin >> gammaVgradusah;
+    
+double gammaVradianah = (gammaVgradusah * (M_PI / 180));
+double bettaVradianah = (bettaVgradusah * (M_PI / 180));
+float alfa = 180 - bettaVgradusah - gammaVgradusah;
+double alfaVradianah = (alfa * (M_PI / 180));
+float b = a * (asin(bettaVradianah)/asin(alfaVradianah));
+float c = a * (asin(gammaVradianah)/asin(alfaVradianah));
+cout << asin(bettaVradianah);
+cout << bettaVradianah;
+cout << asin(gammaVradianah);
+cout << gammaVradianah;
+ cout << "Ответ: " << "b = " << b <<
+        "            \n" << "c = " << c <<
+        "            \n" << "alfa = " << alfa;
+
+    return 0;
+};
