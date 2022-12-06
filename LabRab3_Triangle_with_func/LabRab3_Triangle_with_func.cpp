@@ -1,4 +1,4 @@
-﻿/*Решение треугольника по трём сторонам
+/*Решение треугольника по трём сторонам
   Дано: a,b,c. Найти ∠A,∠B,∠C*/
 #define _USE_MATH_DEFINES           //для объявления M_PI
 #include <iostream>                 //для ввода-вывода
@@ -24,12 +24,32 @@ void FindTriangleParams(float a,float b,float c) {
         cout << "Такого треугольника нет(" << endl;
 }
 
-int main() {
+void task1() {
     setlocale(LC_ALL, "ru-ru");
     //Вводим параметры треугольника
     cout << "Введите сторону a\n"; cin >> a;
     cout << "Введите сторону b\n"; cin >> b;
     cout << "Введите сторону c\n"; cin >> c;
     FindTriangleParams(a,b,c);  //вызов функции
-    return 0;
+}
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    unsigned short choice;
+    cout << "Давай найдём углы треугольника! \nЧтобы продолжить нажмите 1 \nЧтоб выйти нажмите 0\n";
+    cin >> choice;
+    while (choice != 0) {
+        switch (choice)
+        {
+        case 1:
+            task1();
+            cout << "\nЗадача успешно выполнилась! Хотите решить другой треугольник?-нажмите 1. Чтобы выйти - 0.\n";
+            cin >> choice;
+            break;
+        default:
+            cout << "\nВы ввели неверное число, попробуйте ввести другое.\n";
+            cin >> choice;
+        }
+    }
+        return 0;
 }
