@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+double a,an,d;
+double n;
+
+int main() {
+    cout << "Введите a: "<<endl; 
+    cin >> a;
+    cout << "Введите an: "<<endl; 
+    cin >> an;
+    cout << "Введите d: "<<endl; 
+    cin >> d;
+    
+    for (int i = 1; i <=2; i++){         //цикл выполняемый 1 раз
+    n = ((an-a)/(d))+1;                 //формула внутри цикла
+    }
+    
+    cout <<"Ответ:\n" << "n = "<< n;     //вывод n
+    
+    return 0;
+}
